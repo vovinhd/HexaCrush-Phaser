@@ -17,5 +17,6 @@
   "strict": true,
   "trailing": false,
   "smarttabs": true,
-  "white": true
+  "white": true,
+  "predef": [ "Phaser" ]
 }

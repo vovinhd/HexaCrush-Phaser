@@ -5,8 +5,17 @@ var spriteHiehgt = 87;
 
 
 var Tile = function(game, x, y, f, color) {
-    Phaser.Sprite.call(this, game, x, y, color, 0);
 
+    this.coordinates = {};
+    this.coordinates.grid = {};
+    this.coordinates.grid.x = x; 
+    this.coordinates.grid.y = y;
+    this.coordinates.grid.f = f;
+    this.coordinates.world = {};
+
+    this.initWolrdCoordinates();
+
+    Phaser.Sprite.call(this, game, this.coordinates.world.x, this.coordinates.world.y, color, 0);
 
 };
 
@@ -16,6 +25,16 @@ Tile.prototype.constructor = Tile;
 Tile.prototype.update = function() {
 
   // write your prefab's specific update code here
+
+};
+
+Tile.prototype.initWolrdCoordinates = function () {
+
+  this.coordinates.world.x =
+  this.coordinates.world.y =
+
+  if(this.coordinates.world.f === 1) this.flip();
+
 
 };
 
